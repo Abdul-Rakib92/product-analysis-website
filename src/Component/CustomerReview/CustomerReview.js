@@ -1,11 +1,21 @@
-import React from 'react';
+import React from "react";
+import useReviews from "../../hooks/useReviews";
+import Review from "../Review/Review";
 
 const CustomerReview = () => {
-    return (
-        <div>
-            <h2>this is Customer review</h2>
-        </div>
-    );
+  const [reviews, setReviews] = useReviews();
+
+  return (
+    <div>
+      <div className="customer-review">
+        <h1>Customers Reviews</h1>
+        {reviews.map((review) => (
+          <Review key={review.id} 
+          review={review}></Review>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default CustomerReview;
