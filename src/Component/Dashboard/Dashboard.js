@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -21,6 +21,17 @@ const Dashboard = () => {
         <Tooltip />
         <YAxis dataKey={"investment"}></YAxis>
       </LineChart>
+
+      <br />
+      <br />
+        <h1>Investment VS Revenue</h1>
+      <BarChart width={800} height={400} data={months}>
+            <Bar dataKey={"sell"} fill="#8884d8" />
+            <Bar dataKey={"revenue"} fill="#1739d4" />
+            <XAxis dataKey={"month"}></XAxis>
+            <Tooltip />
+            <YAxis dataKey={"investment"}></YAxis>
+        </BarChart>
     </div>
   );
 };
