@@ -9,6 +9,7 @@ const useReviews = () => {
         .then(data => setReviews(data));
     }, []);
     return [reviews, setReviews];
+    
 }
 
 export default useReviews;
