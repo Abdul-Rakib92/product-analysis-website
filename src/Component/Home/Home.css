@@ -1,0 +1,27 @@
+.home-container{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    margin-top: 50px;
+}
+.container-detail{
+    text-align: left;
+    padding: 30px;
+
+}
+.container-detail h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.container-detail p{
+    font-size: 20px;
+}
+
+.text{
+    color: blueviolet;
+    font-size: 27px;
+}
+.home-container img{
+    height: 450px;
+    width: 400px;
+}
